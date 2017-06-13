@@ -1,0 +1,20 @@
+<div class="text-center">
+    <h3 class="title-label">
+        How is the weather in 5 capitals of Europe
+    </h3>
+    <br>
+    <div class="city-box text-center" ng-repeat="city in vm.cities track by $index" ui-sref="app.forecast({cityId:city.id})">
+        <div class="top">
+            <div class="name h3 text-center"><i class="fa fa-map-marker" aria-hidden="true"></i> {{city.name}}</div>
+        </div>
+        <div class="content">
+            <img ng-src="{{vm.iconUrl+city.weather[0].icon+'.png'}}" alt="">
+            <div class="h1 text-center temperature">{{city.main.temp}}°</div>
+            <div>{{city.weather[0].description}}</div>
+            <br>
+            <div>Humidity: {{city.main.humidity}}% </div>
+            <div>Wind strength: {{city.wind.speed}} meter/sec </div>
+            <div>Average: {{(city.main.temp_max + city.main.temp_max )/ 2}}°</div>
+        </div>
+    </div>
+</div>

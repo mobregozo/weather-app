@@ -1,0 +1,47 @@
+<div class="text-center">
+    <h3 class="title-label">
+        {{vm.cityInfo.name}} {{vm.cityInfo.country}} - Forecast for the next hours
+    </h3>
+    <br>
+    <div class="clearfix">
+        <div class="col-xs-6 col-sm-2 forecast-box text-center" ng-repeat="item in vm.cityForecast track by $index" >
+            <div class="forecast-content">
+                <div class="top">
+                    {{item.dayName}} {{item.dt | date:'dd  - HH:mm a'}} 
+                </div>    
+                <img ng-src="{{vm.iconUrl+item.weather[0].icon+'.png'}}" alt="">
+                <div class="h2 nomargin text-center temperature">
+                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+                    {{item.main.temp}}°
+                </div>
+                <p>
+                    {{item.weather[0].description}}
+                </p>
+                <div>
+                    <div>
+                        <div class="col-xs-12 col-sm-6"> Min {{item.main.temp_min}}° </div>
+                        <div class="col-xs-12 col-sm-6"> Max {{item.main.temp_max}}° </div>
+                    </div>                    
+                    <div>
+                        <i class="fa fa-tint" aria-hidden="true"></i>  {{item.main.humidity}}%
+                    </div>
+                    <div>
+                        <i class="fa fa-flag" aria-hidden="true"></i>  {{item.wind.speed}} m/s 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="panel">
+        <h2 class="chart-label">
+            <i class="fa fa-area-chart" aria-hidden="true"></i>
+            Temperature Chart Series
+        </h2>
+        <div class="chart-container" >
+            <canvas ng-if="vm.loadedResults" class="chart chart-line" chart-data="vm.data" chart-labels="vm.labels" chart-options="vm.options">
+            </canvas>
+        </div>
+
+    </div>
+</div>

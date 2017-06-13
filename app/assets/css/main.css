@@ -1,0 +1,118 @@
+html {
+  background: url(../images/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  html body {
+    background-color: transparent;
+    overflow-x: hidden; }
+
+/**    
+Radius mixing
+*/
+.title-label {
+  background: black;
+  color: white;
+  padding: 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  border-radius: 16px; }
+
+.container {
+  overflow-y: hidden !important;
+  margin-bottom: 30px; }
+
+.navbar {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+  .navbar .navbar-brand img {
+    height: 20px; }
+  .navbar .navbar-nav {
+    padding: 0; }
+    .navbar .navbar-nav li:hover {
+      opacity: 0.7; }
+
+.nomargin {
+  margin: 0 !important; }
+
+.city-box {
+  width: 98%;
+  display: inline-block;
+  margin: 1% 1% 1% 0;
+  color: white; }
+  .city-box .top {
+    background-color: white;
+    color: black;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0; }
+    .city-box .top .name {
+      font-size: 100%;
+      margin: 0;
+      padding: 5px; }
+  .city-box .content {
+    padding: 5% 2% 11% 2%;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: black; }
+    .city-box .content .temperature {
+      margin: 0;
+      padding: 5px; }
+  .city-box:last-child {
+    margin: 1% 0% 1% 0; }
+  .city-box:hover {
+    opacity: 0.6;
+    cursor: pointer; }
+
+.chart-container {
+  padding: 36px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white; }
+
+.chart-label {
+  background: black;
+  margin: 15px -1px;
+  padding: 10px;
+  color: white; }
+
+.forecast-box {
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  border-width: 0 1px 0 0;
+  padding-left: 0;
+  padding-right: 0; }
+  .forecast-box .top {
+    color: black;
+    margin: 1px;
+    background: white; }
+  .forecast-box:last-child {
+    border: none; }
+  .forecast-box .forecast-content {
+    padding: 5px; }
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    padding: 0 15px; } }
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .city-box {
+    width: 25%; }
+  .chart-container {
+    width: 80%; } }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .city-box {
+    width: 19%; } }

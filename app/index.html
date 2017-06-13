@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Weather Portal</title>
+
+    <link rel="shortcut icon" type="image/png" href="fav.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="assets/lib/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
+    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- build:css css/styles.css -->
+    <link href="assets/css/main.min.css" rel="stylesheet">
+    <!-- endbuild -->
+
+</head>
+
+<body ng-app="weatherPortal">
+
+    <div>
+        <div ui-view></div>
+    </div>
+
+    <script src="assets/lib/angular/angular.js"></script>
+    <script src="assets/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="assets/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+    <script src="assets/lib/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/lib/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <!-- build:js scripts/app.min.js -->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="shared/templates.js"></script>
+    <script src="components/home/home.config.js"></script>
+    <script src="components/home/home.controller.js"></script>
+    <script src="components/home/home.services.js"></script>
+    <script src="components/forecast/forecast.config.js"></script>
+    <script src="components/forecast/forecast.controller.js"></script>
+    <script src="components/forecast/forecast.services.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

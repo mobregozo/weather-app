@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand">
+            <img src="assets/images/weather.png" alt="">
+        </a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li ui-sref-active="{active: 'app.home'}"><a ui-sref="app.home" href="#">Cities List</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container content-view">
+    <div ui-view="content">
+    </div>
+</div>
